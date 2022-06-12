@@ -1,15 +1,15 @@
 import React, { ReactChild } from "react";
-import { ViewMode } from "../../types/public-types";
-import { TopPartOfCalendar } from "./top-part-of-calendar";
 import {
   getCachedDateTimeFormat,
   getDaysInMonth,
   getLocalDayOfWeek,
   getLocaleMonth,
-  getWeekNumberISO8601,
+  getWeekNumberISO8601
 } from "../../helpers/date-helper";
 import { DateSetup } from "../../types/date-setup";
+import { ViewMode } from "../../types/public-types";
 import styles from "./calendar.module.css";
+import { TopPartOfCalendar } from "./top-part-of-calendar";
 
 export type CalendarProps = {
   dateSetup: DateSetup;
@@ -79,7 +79,7 @@ export const Calendar: React.FC<CalendarProps> = ({
   const getCalendarValuesForWeek = () => {
     const topValues: ReactChild[] = [];
     const bottomValues: ReactChild[] = [];
-    let weeksCount: number = 1;
+    let weeksCount = 1;
     const topDefaultHeight = headerHeight * 0.5;
     const dates = dateSetup.dates;
     for (let i = dates.length - 1; i >= 0; i--) {

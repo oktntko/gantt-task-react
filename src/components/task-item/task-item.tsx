@@ -20,6 +20,7 @@ export type TaskItemProps = {
     action: GanttContentMoveAction,
     selectedTask: BarTask,
     event?: React.MouseEvent | React.KeyboardEvent
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ) => any;
 };
 
